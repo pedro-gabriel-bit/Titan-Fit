@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* HEADER - Só o logo */
+header {
+    padding: 15px 40px;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #ff6600 33%, #7c3aed 33%, #7c3aed 66%, #ff6600 66%) 1;
+}
+
+header img {
+    height: 50px;
+    object-fit: contain;
+}
+
+/* NAV - Menu centralizado com login na direita */
+nav {
+    padding: 15px 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav ul li:last-child a {
+    color: #aaaaaa;
+    /* Login mais apagado como no print */
+    margin-left: 40px;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 80px 20px;
+    min-height: calc(100vh - 130px);
+    flex-wrap: wrap;
+}
+
+/* CARDS */
+.card-basico,
+.card-premium {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    min-height: 580px;
+    border-radius: 40px;
+    padding: 40px 25px;
+}
+
+.card-basico {
+    border: 5px solid #7c3aed;
+}
+
+.card-premium {
+    border: 5px solid #ff6600;
+}
+
+/* TÍTULO DOS CARDS */
+.card-basico h2,
+.card-premium h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* LISTA DOS CARDS */
+.card-basico ul,
+.card-premium ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.card-basico ul li,
+.card-premium ul li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #dddddd;
+}
+
+/* BOTÕES */
+.card-basico button,
+.card-premium button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 30px;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.card-basico button {
+    background-color: #7c3aed;
+}
+
+.card-premium button {
+    background-color: #ff6600;
+}
+
+.card-basico button:hover,
+.card-premium button:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+/* RESPONSIVIDADE - CELULAR */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li:last-child a {
+        margin-left: 0;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .card-basico,
+    .card-premium {
+        width: 100%;
+        max-width: 340px;
+        min-height: auto;
+    }
+}
